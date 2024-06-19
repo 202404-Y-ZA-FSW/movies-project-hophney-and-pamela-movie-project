@@ -1,0 +1,12 @@
+{
+  "name": "movies-project-hophney-and-pamela-movie-project",
+  "version": "1.0.0",
+  "description": "movie site website",
+  "main": "App.js",
+ "start": "node App.js",
+  "author": "Pamela and Hophney",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.3.1"
+  }
+}
