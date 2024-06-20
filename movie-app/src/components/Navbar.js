@@ -8,7 +8,7 @@ const NavBar = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('YOUR_GENRE_API_ENDPOINT')
+    axios.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=10aef7c000aeb272dacfd5f6f1135300`)
       .then(response => {
         setGenres(response.data.genres);
       })
@@ -25,9 +25,9 @@ const NavBar = () => {
   };
 
   return (
-    <nav>
-      <h1>MovieSite</h1>
-      <div>
+    <nav className="navbar-container">
+      <h1 className="navbar-brand">MovieSite</h1>
+      <div className="navbar-links">
         <Link to="/">Home</Link>
         <div>
           <button>Genres</button>
@@ -48,7 +48,7 @@ const NavBar = () => {
           </div>
         </div>
         <Link to="/actors">Actors</Link>
-        <form onSubmit={handleSearch}>
+        <form className="navbar-form" onSubmit={handleSearch}>
           <input 
             type="text" 
             placeholder="Search movies or actors..." 

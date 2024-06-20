@@ -1,20 +1,31 @@
-import React from 'react';
-import { DetailWrapper, Poster, Details, Title, Description, AdditionalInfo } from './MovieDetail.styles';
+import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
-const MovieDetail = ({ movie }) => {
+const MovieDetails = () => {
+  const { id } = useParams();
+  const [movie, setMovie] = useState(null);
+
+  useEffect(() => {
+    axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=10aef7c000aeb272dacfd5f6f1135300`)
+      .then(response => {
+        setMovie(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching movie details:', error);
+      });
+  }, [id]);
+
+  if (!movie) return <p>Loading...</p>;
+
   return (
-    <DetailWrapper>
-      <Poster src={movie.poster} alt={movie.title} />
-      <Details>
-        <Title>{movie.title}</Title>
-        <Description>{movie.description}</Description>
-        <AdditionalInfo>
-          <p>Rating: {movie.rating}</p>
-          <p>Release Date: {movie.releaseDate}</p>
-        </AdditionalInfo>
-      </Details>
-    </DetailWrapper>
+    <div className="details-container">
+      <img className="details-image" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+      <h2 className="details-title">{movie.title}</h2>
+      <p className="details-date">{movie.release_date}</p>
+      <p className="details-overview">{movie.overview}</p>
+    </div>
   );
 };
 
-export default MovieDetail;
+export default MovieDetails;

@@ -1,27 +1,27 @@
 import React, { useState } from 'react';
-import { SearchBarWrapper, Input, Button } from './SearchBar.styles';
+import { useNavigate } from 'react-router-dom';
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = () => {
   const [query, setQuery] = useState('');
+  const navigate = useNavigate();
 
-  const handleInputChange = (event) => {
-    setQuery(event.target.value);
-  };
-
-  const handleSearch = () => {
-    onSearch(query);
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (query.trim()) {
+      navigate(`/search?query=${query}`);
+    }
   };
 
   return (
-    <SearchBarWrapper>
-      <Input 
-        type="text" 
-        placeholder="Search for a movie..." 
-        value={query} 
-        onChange={handleInputChange} 
+    <form onSubmit={handleSearch}>
+      <input
+        type="text"
+        placeholder="Search movies or actors..."
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
       />
-      <Button onClick={handleSearch}>Search</Button>
-    </SearchBarWrapper>
+      <button type="submit">Search</button>
+    </form>
   );
 };
 

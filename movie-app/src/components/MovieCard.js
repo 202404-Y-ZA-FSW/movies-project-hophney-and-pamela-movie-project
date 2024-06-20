@@ -1,16 +1,14 @@
 import React from 'react';
-import { Card, Poster, Details, Title } from './MovieCard.styles';
 import { Link } from 'react-router-dom';
 
 const MovieCard = ({ movie }) => {
   return (
-    <Card>
-      <Poster src={movie.poster} alt={movie.title} />
-      <Details>
-        <Title>{movie.title}</Title>
-        <Link to={`/movies/${movie.id}`}>View Details</Link>
-      </Details>
-    </Card>
+    <div className="card">
+      <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+      <h3 className="card-title">{movie.title}</h3>
+      <p className="card-date">{movie.release_date}</p>
+      <Link className="card-link" to={`/movies/${movie.id}`}>More Details</Link>
+    </div>
   );
 };
 

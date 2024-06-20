@@ -1,26 +1,26 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavBar from './components/Navbar';
 import Footer from './components/Footer';
-import NavBar from './Components/Navbar';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/Home';
 import MoviePage from './pages/MoviePage';
-import SearchPage from './pages/SearchPage';
-import ActorsPage from './pages/ActorsPage';
+import MovieDetails from './components/MovieDetails';
+import SearchPage from './pages/SearchPages';
+import './App.css';
 
-function App() {
+const App = () => {
   return (
     <Router>
-      <GlobalStyles />
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/movies/:id" element={<MoviePage />} />
+        <Route path="/movies/:type" element={<MoviePage />} />
+        <Route path="/movies/:id" element={<MovieDetails />} />
         <Route path="/search" element={<SearchPage />} />
-        <Route path="/actors" element={<ActorsPage />} />
       </Routes>
       <Footer />
     </Router>
   );
-}
+};
 
 export default App;
