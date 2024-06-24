@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const API_KEY = '10aef7c000aeb272dacfd5f6f1135300';
 const API_BASEURL = 'https://api.themoviedb.org/3';
 
@@ -45,3 +46,5 @@ export const fetchActorDetails = async (actorId) => {
   const res = await fetch(`${API_BASEURL}/person/${actorId}?api_key=${API_KEY}`);
   return res.json();
 };
+=======
+>>>>>>> f045d57b74d14aad970c1b325ee802a7006fed58
