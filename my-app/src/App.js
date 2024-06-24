@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Movies from './pages/movies/Movies';
@@ -26,7 +25,7 @@ function App() {
         <Route path="/genre/:genreId" element={<GenreMovies />} /> 
         <Route path="/tvshows" element={<TVShows />} />
         <Route path="/tvshow/:id" element={<TVShowDetails />} />
-        <Route component={NotFound} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

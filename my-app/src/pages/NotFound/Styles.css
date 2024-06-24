@@ -1,16 +1,47 @@
 .not-found-container {
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  .not-found-container h1 {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .not-found-container p {
-    font-size: 1.5rem;
-    color: #666;
-  }
-  
+  text-align: center;
+  margin-top: 50px;
+}
+
+.not-found-container h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.not-found-container p {
+  font-size: 1.5rem;
+  color: #666;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found-container {
+  text-align: center;
+}
+
+.not-found-container h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.not-found-container p {
+  font-size: 1.5rem;
+  color: #666;
+}
