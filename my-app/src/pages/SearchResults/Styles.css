@@ -1,0 +1,46 @@
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.home-container, .search-container {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f8f9fa; 
+}
+
+.search-results {
+  width: 100%; /* Ensure it takes full width */
+}
+
+.result-list {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping to next line if needed */
+  justify-content: center; /* Centers the items horizontally */
+  gap: 20px; /* Adds space between the items */
+}
+
+.result-item {
+  flex: 0 1 200px; /* Allows the item to take up a fixed width */
+  margin: 10px;
+  text-align: center;
+}
+
+footer {
+  background-color: #343a40; 
+  color: white; 
+  padding: 10px 0;
+  text-align: center;
+}

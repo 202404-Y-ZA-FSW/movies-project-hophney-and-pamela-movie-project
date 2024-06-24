@@ -1,0 +1,73 @@
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.home-container, .movies-container, .tvshows-container { /* Unified styling for containers */
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f8f9fa; 
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-card {
+  margin: 15px;
+  text-align: center;
+  text-decoration: none; /* Ensure no underline */
+  color: inherit; /* Ensure no default link color */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.movie-card img {
+  width: 150px;
+  height: 225px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie-info h5 {
+  margin: 10px 0 0 0;
+}
+
+.movie-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #343a40; 
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #343a40;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.movie-card-link {
+  text-decoration: none;
+}

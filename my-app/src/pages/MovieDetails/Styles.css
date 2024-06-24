@@ -1,0 +1,32 @@
+
+.movie-details-container {
+  padding: 20px;
+}
+
+.related-movies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+}
+
+.related-movie {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.related-movie-poster {
+  width: 200px; 
+  height: auto; 
+}
+
+.production-logo {
+  width: 100px; 
+  height: auto; 
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}

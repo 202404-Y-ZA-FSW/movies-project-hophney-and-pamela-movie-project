@@ -1,0 +1,76 @@
+/* Custom Navbar Styles */
+.custom-navbar {
+  background-color: #1a1a1a;
+  color: #bfbfbf;
+  font-family: Arial, sans-serif;
+}
+
+.navbar-brand-custom {
+  margin-left: 20px;
+}
+
+.custom-navbar .nav-link {
+  color: #bfbfbf;
+  position: relative;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #ffffff;
+}
+
+.custom-navbar .movies-dropdown,
+.custom-navbar .genres-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #333333;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 160px;
+  max-height: 300px; /* Set max height for dropdown */
+  overflow-y: auto; /* Add vertical scrollbar */
+}
+
+.custom-navbar .nav-link .show {
+  display: block !important;
+}
+
+.custom-navbar .dropdown-item {
+  color: #bfbfbf;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.custom-navbar .dropdown-item:hover {
+  background-color: #555555;
+  color: #ffffff;
+}
+
+/* Flexbox adjustments for Navbar */
+.custom-navbar .navbar-nav {
+  flex: 1; /* Take up available space */
+}
+
+.custom-navbar .form-inline {
+  margin-left: auto; /* Push to the right */
+  margin-right: 10px; /* Add space between form and sign-in button */
+}
+
+.custom-navbar .search-input {
+  margin-right: 10px; /* Add margin-right for spacing */
+}
+
+.sign-in-button {
+  background-color: #1a1a1a !important;
+  color: #bfbfbf !important;
+  border: 1px solid #bfbfbf !important;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin-right: 10px; /* Add margin-right for spacing */
+}
+
+.sign-in-button:hover {
+  background-color: #bfbfbf !important;
+  color: #1a1a1a !important;
+}

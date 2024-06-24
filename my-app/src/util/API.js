@@ -1,4 +1,4 @@
-const API_KEY = '75ace8b030ad609eda69c334c76f282f';
+const API_KEY = '10aef7c000aeb272dacfd5f6f1135300';
 const API_BASEURL = 'https://api.themoviedb.org/3';
 
 export const fetchGenres = async () => {
@@ -11,8 +11,23 @@ export const fetchMovies = async (category) => {
   return res.json();
 };
 
-export const searchMovies = async (query) => {
-  const res = await fetch(`${API_BASEURL}/search/movie?api_key=${API_KEY}&query=${query}`);
+export const searchMedia = async (query, mediaType) => {
+  let endpoint = '';
+  switch (mediaType) {
+    case 'movie':
+      endpoint = 'search/movie';
+      break;
+    case 'tv':
+      endpoint = 'search/tv';
+      break;
+    case 'person':
+      endpoint = 'search/person';
+      break;
+    default:
+      throw new Error(`Unsupported media type: ${mediaType}`);
+  }
+
+  const res = await fetch(`${API_BASEURL}/${endpoint}?api_key=${API_KEY}&query=${query}`);
   return res.json();
 };
 
