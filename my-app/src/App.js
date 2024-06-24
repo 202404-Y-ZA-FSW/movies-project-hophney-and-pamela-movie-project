@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Movies from './pages/movies/Movies';
@@ -33,5 +33,3 @@ function App() {
 }
 
 export default App;
-=======
->>>>>>> f045d57b74d14aad970c1b325ee802a7006fed58
