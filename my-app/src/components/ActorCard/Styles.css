@@ -1,69 +1,68 @@
 .movie-card {
-    margin: 15px;
-    width: 200px;
-    transition: transform 0.2s;
-  }
-  
-  .movie-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .movie-card img {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  .movie-info {
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  .movie-info h5 {
-    font-size: 1rem;
-    color: #333;
-  }
-  
-  .movie-card a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .actor-card {
-    margin: 15px;
-    width: 200px;
-    transition: transform 0.2s;
-  }
-  
-  .actor-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .actor-card img {
-    width: 100%;
-    border-radius: 10px;
-  }
-  
-  .actor-info {
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  .actor-info h5 {
-    font-size: 1rem;
-    color: #333;
-  }
-  
-  .actor-card a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .nav-link {
-    color: #007bff; 
-    background-color: gray; 
-    border: none;
-    border-radius: 0;
-    padding: 8px 15px;
-    font-weight: bold;
-  }
-  
+  margin: 15px;
+  width: 200px;
+  transition: transform 0.2s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.movie-info {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.movie-info h5 {
+  font-size: 1rem;
+  color: #333;
+}
+
+.movie-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.actor-card {
+  margin: 15px;
+  width: 200px;
+  transition: transform 0.2s;
+}
+
+.actor-card:hover {
+  transform: scale(1.05);
+}
+
+.actor-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.actor-info {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.actor-info h5 {
+  font-size: 1rem;
+  color: #333;
+}
+
+.actor-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-link {
+  color: #007bff; 
+  background-color: gray; 
+  border: none;
+  border-radius: 0;
+  padding: 8px 15px;
+  font-weight: bold;
+}
